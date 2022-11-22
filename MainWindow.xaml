@@ -1,0 +1,185 @@
+﻿<Window x:Class="WPF_PR5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_PR5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="388" Width="956" ResizeMode="NoResize">
+    <Grid Margin="2,0,-2,0">
+        <Button x:Name="button_Zapis" HorizontalAlignment="Left" Margin="370,257,0,0" VerticalAlignment="Top" FontSize="18" Width="104" RenderTransformOrigin="0.5,0.5" IsCancel="True" Height="30" Click="ZapisButton_Click" ToolTip="Выбирите объект">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-35"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="11.315"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Label Content="Изменить" FontSize="16" Padding="5,2,5,5">
+                <Label.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="35"/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.LayoutTransform>
+            </Label>
+        </Button>
+        <TextBox x:Name="textBoxOutLog" HorizontalAlignment="Left" Margin="575,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="358" Height="185" FontSize="14" IsReadOnly="True"/>
+        <Label Content="Ввод ТТХ автомобиля" HorizontalAlignment="Left" Margin="15,26,0,0" VerticalAlignment="Top" FontSize="18" Width="221" FontWeight="Bold"/>
+        <Label Content="Автомобиль" HorizontalAlignment="Left" Margin="575,25,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="buttonvivod" HorizontalAlignment="Left" Margin="386,312,0,0" VerticalAlignment="Top" FontSize="18" Click="ExitButton_Click" Height="30" RenderTransformOrigin="0.5,0.5" Width="66">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-35"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.35"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Label Content="Выход" FontSize="16" RenderTransformOrigin="0.5,0.5" Height="26" Padding="5,2,5,5">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="35"/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+        </Button>
+        <Button x:Name="buttonvivod_Copy" HorizontalAlignment="Left" Margin="256,312,0,0" VerticalAlignment="Top" FontSize="18" Click="InfoButton_Click" Height="30" RenderTransformOrigin="0.5,0.5" Width="122">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-35"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.35"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Label Content="О программе" FontSize="16" RenderTransformOrigin="0.5,0.5" Height="26" Padding="5,2,5,5">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="35"/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+        </Button>
+        <ListBox x:Name="listBoxCars" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="248,64,0,0" HorizontalAlignment="Left" Width="322" Height="185" VerticalAlignment="Top"/>
+        <Label Content="Гараж" HorizontalAlignment="Left" Margin="248,26,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Height="38"/>
+        <Button x:Name="button_Zapis_Copy" HorizontalAlignment="Left" Margin="245,257,0,0" VerticalAlignment="Top" FontSize="18" Click="AddButton_Click" Width="118" RenderTransformOrigin="0.5,0.5" IsCancel="True" Height="30">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-35"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="11.315"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Label Content="Добавить" FontSize="16" Padding="5,2,5,5">
+                <Label.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="35"/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.LayoutTransform>
+            </Label>
+        </Button>
+        <Button x:Name="button_Zapis_Copy1" HorizontalAlignment="Left" Margin="480,257,0,0" VerticalAlignment="Top" FontSize="18" Click="VivodButton_Click" Width="96" RenderTransformOrigin="0.5,0.5" IsCancel="True" Height="30" ToolTip="Выбирите объект">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-35"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="11.315"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Label Content="Вывести" FontSize="16" Padding="5,2,5,5">
+                <Label.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="35"/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.LayoutTransform>
+            </Label>
+        </Button>
+        <Button x:Name="buttonDelete" HorizontalAlignment="Left" Margin="808,257,0,0" VerticalAlignment="Top" FontSize="18" Width="104" RenderTransformOrigin="0.5,0.5" IsCancel="True" Height="30" Click="ButtonDelete_Click" ToolTip="Выберите объект для удаления">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-35"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="11.315"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Label Content="Удалить" FontSize="16" Padding="5,2,5,5">
+                <Label.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="35"/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.LayoutTransform>
+            </Label>
+        </Button>
+        <Button x:Name="button_Zapis_Copy2" HorizontalAlignment="Left" Margin="582,257,0,0" VerticalAlignment="Top" FontSize="18" Click="PlusButton_Click" Width="220" RenderTransformOrigin="0.5,0.5" IsCancel="True" Height="30" ToolTip="Выберите машину и нажмите на эту кнопку для увеличения мощности на 1">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-35"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="11.315"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Label Content="Увеличить мощность на 1" FontSize="16" Padding="5,2,5,5">
+                <Label.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="35"/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.LayoutTransform>
+            </Label>
+        </Button>
+        <TabControl x:Name="tabControlTransport" Margin="15,65,0,0" HorizontalAlignment="Left" Width="221" Height="281" VerticalAlignment="Top">
+            <TabItem Header="Автомобиль">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Марка" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxMarka" HorizontalAlignment="Center" Margin="0,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" FontSize="18"/>
+                    <Label Content="Число цилиндров" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <TextBox x:Name="textBoxNumCylinders" HorizontalAlignment="Center" Margin="0,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" FontSize="18"/>
+                    <Label Content="Мощность двигателя (кВт)" HorizontalAlignment="Left" Margin="10,128,0,0" VerticalAlignment="Top" Width="205" FontSize="16"/>
+                    <TextBox x:Name="textBoxkW" HorizontalAlignment="Center" Margin="0,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" FontSize="18"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Грузовик">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="35*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Марка" HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top" FontSize="16" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="textBoxMarkaLorry" HorizontalAlignment="Left" Margin="10,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" FontSize="18" Grid.ColumnSpan="2"/>
+                    <Label Content="Число цилиндров" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" FontSize="16" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="textBoxNumCylindersLorry" HorizontalAlignment="Left" Margin="10,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" FontSize="18" Grid.ColumnSpan="2"/>
+                    <Label Content="Мощность двигателя (кВт)" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" Width="205" FontSize="16" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="textBoxkWLorry" HorizontalAlignment="Left" Margin="10,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" FontSize="18" Grid.ColumnSpan="2"/>
+                    <Label Content="Грузоподъёмность" HorizontalAlignment="Left" Margin="10,186,0,0" VerticalAlignment="Top" Width="205" FontSize="16" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="textBoxCapacityLorry" HorizontalAlignment="Left" Margin="10,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" FontSize="18" Grid.ColumnSpan="2"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
